@@ -12,10 +12,9 @@ packages = [
 python = "^3.10"
 fastapi = "^0.114.0"
 uvicorn = { version = "^0.30.0", extras = ["standard"] }
-payments-py = { path = "../payments-py", develop = true }
+payments-py = "0.7.6"
 python-dotenv = "^1.0.1"
 mcp = {extras = ["cli"], version = "^1.12.4"}
-
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.1.1"
 httpx = "^0.28.1"
