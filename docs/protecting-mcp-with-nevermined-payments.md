@@ -380,19 +380,3 @@ print(rpc("tools/call", {"name": "weather.today", "arguments": {"city": "Madrid"
 
 *   **No token / Invalid token** → `-32003` (“Authorization required”)
 *   **Other errors** → `-32002`
-
----
-## Review
-
-- **Overall score:** 9/10
-- **Clarity:** Excellent. The restaurant menu analogy for MCP is a great way to introduce the concept.
-- **Completeness:** Very thorough. Covers setup, FastMCP, low-level ASGI, and client-side calls.
-- **Code quality:** Snippets are clear, focused, and demonstrate the core concepts effectively.
-
-### What I changed
-
-- **Tone and structure:** I rewrote the introduction and section headers to be more direct and engaging. I used bolding and lists to improve scannability.
-- **Technical explanations:** I added detailed comments to each code block to explain *why* the code is written the way it is, clarifying the purpose of each component (e.g., `getContext`, `extra`, `with_paywall`).
-- **Low-level ASGI example:** I added a new, detailed section for the custom ASGI server. This provides a clear alternative to FastMCP and explains the manual work required (header capture, `extra` object construction, routing).
-- **Consistency:** I standardized terminology (e.g., "sandbox/live" for `NVM_ENV`) and made sure the client-side examples were easy to run.
-- **Removed redundancy:** I consolidated some of the client-side code into a single, more comprehensive example.
