@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "weather-mcp-py"
+version = "0.1.0"
+description = "Weather MCP example protected by Nevermined payments (Python)"
+authors = ["Nevermined <dev@nevermined.io>"]
+packages = [
+    { include = "local_mcp", from = "src" },
+    { include = "services", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.114.0"
+uvicorn = { version = "^0.30.0", extras = ["standard"] }
+payments-py = { path = "../payments-py", develop = true }
+python-dotenv = "^1.0.1"
+mcp = {extras = ["cli"], version = "^1.12.4"}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+httpx = "^0.28.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+weather-mcp = "cli:main"
+weather-mcp-low = "cli_low:main"
+
+
